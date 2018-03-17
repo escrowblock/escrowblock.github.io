@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION;TYPE=WORK:3.0
+FN;CHARSET=UTF-8;:Support Team
+N;CHARSET=UTF-8;:Support Team;;;;
+PROFILE:VCARD
+ADR;CHARSET=UTF-8;:;;Street address;City;;Index;Country
+EMAIL:support@escrowblock.net
+ORG;CHARSET=UTF-8;:Escrow block
+URL:https://escrowblock.net
+END:VCARD
+  

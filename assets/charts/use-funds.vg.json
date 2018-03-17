@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v3.0.json",
+  "width": 200,
+  "height": 200,
+  "autosize": "none",
+
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {"id": 1, "percents": 37},
+        {"id": 2, "percents": 3},
+        {"id": 3, "percents": 60}
+      ],
+      "transform": [
+        {
+          "type": "pie",
+          "field": "percents"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "range": {"scheme": "category20"}
+    },
+    {
+      "name": "r",
+      "type": "sqrt",
+      "domain": {"data": "table", "field": "data"},
+      "zero": true,
+      "range": [40, 100]
+    }
+  ],
+  "marks": [
+    {
+      "type": "arc",
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "fill": {"scale": "color", "field": "id"},
+          "x": {"signal": "width / 2"},
+          "y": {"signal": "height / 2"}
+        },
+        "update": {
+          "startAngle": {"field": "startAngle"},
+          "endAngle": {"field": "endAngle"},
+          "padAngle": 0,
+          "innerRadius": {"value": 25},
+          "outerRadius": {"signal": "width / 2"},
+          "cornerRadius": 0
+        }
+      }
+    }
+  ]
+}
