@@ -52,7 +52,7 @@ $(document)
             type: 'flv',
             pic: '/assets/videos/escrow.png'
           },
-          preload: 'metadata'
+          preload: 'none'
       });
     }
 
@@ -82,7 +82,7 @@ $(document)
                     url: '/assets/videos/' + value + '.vtt',
                     color: '#000000'
                   },
-                  preload: 'metadata'
+                  preload: 'none'
               });
             }
 
