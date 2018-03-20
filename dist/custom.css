@@ -276,6 +276,10 @@ ol.ui.list.manifest li:before {
   font-weight: bold;
 }
 
+.ui.inverted.vertical.footer.segment {
+  padding-top: 4em;
+}
+
 @media only screen and (max-width: 700px) {
   .ui.fixed.menu {
     display: none !important;
