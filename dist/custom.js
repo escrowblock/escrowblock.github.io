@@ -44,17 +44,6 @@ $(document)
       .sidebar('attach events', '.toc.item');
 
     var dp = null;
-    if($("#dplayer")[0]) {
-      dp = new DPlayer({
-          container: $("#dplayer")[0],
-          video: {
-            url: '/assets/videos/escrowICOen.flv',
-            type: 'flv',
-            pic: '/assets/videos/escrow.png'
-          },
-          preload: 'none'
-      });
-    }
 
     // show dropdown on hover
     $('.main.menu .ui.dropdown').dropdown({
