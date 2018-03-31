@@ -127,7 +127,7 @@ $(document)
 
     var updateCurrentStage = function() {
       $.get(base_url + 'currentStage', function(data) {
-        var currentStage = new Number(data.data).valueOf() - 1; // ETH
+        var currentStage = new Number(data.data).valueOf(); // ETH
         var stageCount = 10 - currentStage;
         $('.iito-stage-remain').html(i18next.t('i18n-iito-stage-remain', {count: stageCount}));
         $('.current-result-stage').html(currentStage);
