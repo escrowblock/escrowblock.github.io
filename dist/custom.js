@@ -44,7 +44,7 @@ $(document)
       .sidebar('attach events', '.toc.item');
 
     var dp = null;
-
+    var initDp  = false;
     // show dropdown on hover
     $('.main.menu .ui.dropdown').dropdown({
       on: 'hover',
@@ -59,20 +59,23 @@ $(document)
           i18next.changeLanguage(value, function (err, t) {
             i18next_render(err, t);
 
-            if($("#dplayer")[0]) {
+            if($("#dplayer")[0] && initDp) {
               dp = new DPlayer({
                   container: $("#dplayer")[0],
                   video: {
-                    url: '/assets/videos/escrowICOen.flv',
-                    type: 'flv',
+                    url: '/assets/videos/escrowICOen.mp4',
+                    type: 'auto',
                     pic: '/assets/videos/escrow.png'
                   },
                   subtitle: {
                     url: '/assets/videos/' + value + '.vtt',
                     color: '#000000'
                   },
-                  preload: 'none'
+                  preload: 'none',
+                  autoplay: false
               });
+            } else {
+              initDp = true;
             }
 
             if (err) {
@@ -106,33 +109,39 @@ $(document)
 
     $('.ui.accordion').accordion();
 
-    /*
-    var jqxhr = $.get('https://wallet.escrowblock.net/api/v1/statisticTotalCollected', function(data) {
-       for(i in data) {
-         $("#current-result-" + i).text(data[i]);
-       }
-    })
-    .fail(function(data) {
-       console.warn("Error! Data: " + data.statusText);
-    });
-    setInterval(function(){
-      var jqxhr = $.get('https://wallet.escrowblock.net/api/v1/statisticTotalCollected', function(data) {
-        for(i in data) {
-          $("#current-result-" + i).text(data[i]);
-        }
+    var saleAddress = '0x27a36731337cdee330d99b980b73e24f6e188618';
+    var base_url  = 'https://etherui.net/api/v1/smartcontract/mainnet/' + saleAddress  + '/';
+
+    var updateTotalCollected = function() {
+      $.get(base_url + 'totalCollected', function(data) {
+        var aim = 20000; // ETH
+        var totalCollected = new Number(data.data).valueOf()/1e+18;
+        $('#iito-counter').attr('data-percent', 100 - Math.ceil((aim - totalCollected)/aim*100));
+        $('#iito-counter').progress();
+        $('.current-result-collected').html('<a _target="blank" href="https://etherui.net/address/' + saleAddress + '">' + totalCollected + ' ETH</a>');
       })
       .fail(function(data) {
-         console.warn("Error! Data: " + data.statusText);
+        console.warn("Error! Data: " + data.statusText);
       });
-    }, 1000 * 60);
-    */
+    };
 
-    var aim = 1000; // API EtherUI
-    var currentState = 151; // API EtherUI
-    var currentStage = 1; // API EtherUI
-    var stageCount = 10 - currentStage;
-    $('#iito-counter').attr('data-percent', 100 - Math.ceil((aim - currentState)/aim*100));
-    $('#iito-counter').progress();
+    var updateCurrentStage = function() {
+      $.get(base_url + 'currentStage', function(data) {
+        var currentStage = new Number(data.data).valueOf() - 1; // ETH
+        var stageCount = 10 - currentStage;
+        $('.iito-stage-remain').html(i18next.t('i18n-iito-stage-remain', {count: stageCount}));
+        $('.current-result-stage').html(currentStage);
+        $('.current-result-bonus').html(currentStage*2 + '%');
+      })
+      .fail(function(data) {
+        console.warn("Error! Data: " + data.statusText);
+      });
+    };
+
+    setInterval(function() {
+      updateTotalCollected();
+      updateCurrentStage();
+    }, 1000 * 60);
 
     i18next
     	.use(window.i18nextBrowserLanguageDetector)
@@ -394,7 +403,6 @@ $(document)
       }
 
       $(".moment-iito-start").html(moment(icoStartDate).format('ddd, MMMM D (Y) HH:mm UTC'));
-      $('#iito-counter').find('.label').html(i18next.t('i18n-iito-stage-remain', {count: stageCount}));
       $('.i18n-team-vacancy-description').html(i18next.t('i18n-team-vacancy-description', {resume: '<a href="mailto:support@escrowblock.net">' + i18next.t('i18n-team-send-cv') + '</a>'}));
       $('.i18n-e-mail').attr('placeholder', i18next.t('i18n-e-mail'));
 
