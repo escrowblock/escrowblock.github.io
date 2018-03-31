@@ -131,7 +131,7 @@ $(document)
         var stageCount = 10 - currentStage;
         $('.iito-stage-remain').html(i18next.t('i18n-iito-stage-remain', {count: stageCount}));
         $('.current-result-stage').html(currentStage);
-        $('.current-result-bonus').html(currentStage*2 + '%');
+        $('.current-result-bonus').html(22-currentStage*2 + '%');
       })
       .fail(function(data) {
         console.warn("Error! Data: " + data.statusText);
@@ -143,6 +143,9 @@ $(document)
       updateCurrentStage();
     }, 1000 * 60);
 
+    updateTotalCollected();
+    updateCurrentStage();
+    
     i18next
     	.use(window.i18nextBrowserLanguageDetector)
       .use(window.i18nextXHRBackend)
