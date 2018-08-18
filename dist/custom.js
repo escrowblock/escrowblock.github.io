@@ -3,8 +3,8 @@ $(document)
 
     var icoStartDate = "2018-04-02 12:00:00";
 
-    $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
-      if(data['country_code'] == 'US') {
+    $.getJSON('//geoip.nekudo.com/api/', function(data) {
+      if(data['country'] && data['country']['code'] == 'US') {
         $('.ui.modal.access-restriction').modal('show');
       }
     });
