@@ -215,7 +215,7 @@
   "i18n-fair-iito": "Manifest \"Fair IITO\"",
   "i18n-fair-iito-1": "All calculations of tokens, dividends and other financial mechanisms during the IITO are conducted exclusively in the ETH.",
   "i18n-fair-iito-2": "The initial price is set at the rate of 1000 USD = 1 ETH and 1 ESCB = 0.1 USD, therefore 1 ETH is equal to 5 000 ESCB at all stages.",
-  "i18n-fair-iito-3": "Issue of tokens can be made only at the address of sale <a href=\"https://etherui.net/address/0x65717fb50ee8f93827f9eeca761e108e502b255f\"> 0x65717fb50ee8f93827f9eeca761e108e502b255f </a>.",
+  "i18n-fair-iito-3": "Issue of tokens can be made only at the address of sale <a href=\"https://etherscan.io/address/0x65717fb50ee8f93827f9eeca761e108e502b255f\"> 0x65717fb50ee8f93827f9eeca761e108e502b255f </a>.",
   "i18n-fair-iito-4": "The mechanism for ex-works and refunds, when the minimum amount is not reached, is included in the Smart Contract and limits the withdrawal of funds from the sale purse until the minimum amount of 40 ETH is reached in one year or before.",
   "i18n-fair-iito-5": "After each phase, the ESCB command can request the release of tokens for its part (30%), the tokens thus issued are frozen for a year, then they are thawed for half a year in equal portions (Cliff / Vested mechanic), with such tokens used to receive dividends on equal terms with all conditions.",
   "i18n-fair-iito-6": "The release events of tokens can be of two types - by sending ETH directly to the purse address or issuing by the ESCB command when receiving payments using plastic cards or bank transfers.",
