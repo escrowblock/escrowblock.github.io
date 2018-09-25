@@ -109,7 +109,7 @@ $(document)
 
     $('.ui.accordion').accordion();
 
-    var saleAddress = '0x27a36731337cdee330d99b980b73e24f6e188618';
+    var saleAddress = '0x65717fb50ee8f93827f9eeca761e108e502b255f';
     var base_url  = 'https://etherui.net/api/v1/smartcontract/mainnet/' + saleAddress  + '/';
 
     var updateTotalCollected = function() {
@@ -312,6 +312,14 @@ $(document)
                     "i18n-faq-16-content",
                     "i18n-faq-17-title",
                     "i18n-faq-17-content",
+                    "i18n-faq-18-title",
+                    "i18n-faq-18-content",
+                    "i18n-faq-19-title",
+                    "i18n-faq-19-content",
+                    "i18n-faq-20-title",
+                    "i18n-faq-20-content",
+                    "i18n-faq-21-title",
+                    "i18n-faq-21-content",
                     "i18n-access-restriction",
                     "i18n-access-restriction-detected",
                     "i18n-access-restriction-body",
