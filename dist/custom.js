@@ -110,7 +110,7 @@ $(document)
     $('.ui.accordion').accordion();
 
     var saleAddress = '0x65717fb50ee8f93827f9eeca761e108e502b255f';
-    var base_url  = 'https://etherscan.io/api/v1/smartcontract/mainnet/' + saleAddress  + '/';
+    var base_url  = 'https://etherui.net/api/v1/smartcontract/mainnet/' + saleAddress  + '/';
 
     var updateTotalCollected = function() {
       $.get(base_url + 'totalCollected', function(data) {
