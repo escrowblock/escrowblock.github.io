@@ -212,6 +212,7 @@ $(document)
                     "i18n-rights",
                     "i18n-whitepaper",
                     "i18n-terms-conditions",
+					"i18n-current-result-listing",
                     "i18n-one-page-presentation",
                     "i18n-privacy-policy",
                     "i18n-brief-title-1",

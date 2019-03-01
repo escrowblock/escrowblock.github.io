@@ -202,6 +202,7 @@
   "i18n-current-result-stage": "Bühne",
   "i18n-current-result-bonus": "Bonus",
   "i18n-current-result-collected": "Gesammelt",
+  "i18n-current-result-listing": "Börsennotierung",
   "i18n-referral-program": "Empfehlungsprogramm",
   "i18n-referral-program-description": "Jeder Benutzer, der in der Wallet-App angemeldet ist, kann einen Verweislink verwenden und erhält 2% vom Kauf eines referenzierten Clients. Das Empfehlungsprogramm ist im Smart-Vertrag enthalten und verteilt Token nur, wenn ein Einkauf von der paymentAffiliate-Methode mit der Verweisadresse aufgerufen wird. Dieser Prozess ist in Wallet-App automatisiert.",
   "i18n-fair-iito": "Manifest \"Fair IITO\"",

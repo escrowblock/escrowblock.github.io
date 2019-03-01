@@ -202,6 +202,7 @@
   "i18n-current-result-stage": "ステージ",
   "i18n-current-result-bonus": "ボーナス",
   "i18n-current-result-collected": "集めました",
+  "i18n-current-result-listing": "取引所リスト",
   "i18n-referral-program": "紹介プログラム",
   "i18n-referral-program-description": "wallet-appに登録されているユーザーは参照リンクを共有し、参照されたクライアントの購入から2％を得ることができます。紹介プログラムはスマート契約に含まれ、紹介アドレスでpaymentAffiliateメソッドから購入が呼び出された場合にのみトークンを配布します。このプロセスはwallet-appで自動化されています。",
   "i18n-fair-iito": "マニフェスト「公正IITO」",

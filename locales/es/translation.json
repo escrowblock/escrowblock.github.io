@@ -202,6 +202,7 @@
   "i18n-current-result-stage": "Escenario",
   "i18n-current-result-bonus": "Prima",
   "i18n-current-result-collected": "Recogido",
+  "i18n-current-result-listing": "Listado de intercambio",
   "i18n-referral-program": "Programa de referencia",
   "i18n-referral-program-description": "Cualquier usuario que esté registrado en la aplicación de billetera puede compartir el enlace de referencia y obtener un 2% de la compra de un cliente al que se hace referencia. El programa de referencia se incluye en el contrato Smart y distribuye tokens solo si se invoca una compra desde el método de pago de afiliación con la dirección de referencia. Este proceso está automatizado en wallet-app.",
   "i18n-fair-iito": "Manifiesto \"Feria IITO\"",

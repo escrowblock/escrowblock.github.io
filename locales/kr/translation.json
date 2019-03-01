@@ -202,6 +202,7 @@
   "i18n-current-result-stage": "단계",
   "i18n-current-result-bonus": "보너스",
   "i18n-current-result-collected": "모은",
+  "i18n-current-result-listing": "Exchange 목록",
   "i18n-referral-program": "추천 프로그램",
   "i18n-referral-program-description": "wallet-app에 등록 된 모든 사용자는 참조 링크를 공유 할 수 있으며 참조 된 클라이언트 구매에서 2 %를 얻을 수 있습니다. 추천 프로그램은 Smart 계약에 포함되어 있으며 추천 주소로 paymentAffiliate 메소드에서 구매가 호출 된 경우에만 토큰을 배포합니다. 이 프로세스는 wallet-app에서 자동화됩니다.",
   "i18n-fair-iito": "\"공정한 IITO\"선언",

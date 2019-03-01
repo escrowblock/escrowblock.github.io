@@ -203,6 +203,7 @@
   "i18n-current-result-stage": "阶段",
   "i18n-current-result-bonus": "奖金",
   "i18n-current-result-collected": "集",
+  "i18n-current-result-listing": "交易所上市",
   "i18n-referral-program": "推荐计划",
   "i18n-referral-program-description": "任何在wallet-app中注册的用户都可以共享引用链接，并从购买引用的客户端中获取2％。推荐计划包含在智能合约中，并且只有在通过推荐地址从paymentAffiliate方法中调用购买时才分配代币。这个过程在钱包应用程序中自动执行。",
   "i18n-fair-iito": "清单\"Fair IITO\"",

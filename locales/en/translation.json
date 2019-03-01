@@ -202,6 +202,7 @@
   "i18n-current-result-stage": "Stage",
   "i18n-current-result-bonus": "Bonus",
   "i18n-current-result-collected": "Collected",
+  "i18n-current-result-listing": "Exchange listing",
   "i18n-referral-program": "Referral program",
   "i18n-referral-program-description": "Any user who is signed up in our wallet-app can share the referral link and get 2% from the purchasing of a referenced client. The referral program is included in the Smart contract and distributes tokens only if a purchase is invoked from payment Affiliate method with the referral address. This process is automated in wallet-app.",
   "i18n-fair-iito": "Manifest \"Fair IITO\"",
