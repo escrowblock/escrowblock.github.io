@@ -1,8 +1,6 @@
 $(document)
   .ready(function() {
 
-    var icoStartDate = "2018-04-02 12:00:00";
-
     $.getJSON('//geoip.nekudo.com/api/', function(data) {
       if(data['country'] && data['country']['code'] == 'US') {
         $('.ui.modal.access-restriction').modal('show');
@@ -406,7 +404,6 @@ $(document)
         $("." + names[i]).html(i18next.t(names[i]));
       }
 
-      $(".moment-iito-start").html(moment(icoStartDate).format('ddd, MMMM D (Y) HH:mm UTC'));
       $('.i18n-team-vacancy-description').html(i18next.t('i18n-team-vacancy-description', {resume: '<a href="mailto:support@escrowblock.net">' + i18next.t('i18n-team-send-cv') + '</a>'}));
       $('.i18n-e-mail').attr('placeholder', i18next.t('i18n-e-mail'));
 
